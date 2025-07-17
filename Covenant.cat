@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -369,6 +369,11 @@
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
                       </costs>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Needle Rifle" hidden="false" id="36db-d6ab-6f28-0fb1">
+                      <infoLinks>
+                        <infoLink name="Needle Rifle" id="74f2-2557-1678-bb91" hidden="false" type="profile" targetId="243d-45c5-b0cb-77c5"/>
+                      </infoLinks>
+                    </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
                     <entryLink import="true" name="Carbine" hidden="false" id="3e5a-d691-6ef2-f571" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
@@ -643,19 +648,12 @@ A Grunt Squad may only split in this way if:
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="851c-3d98-8c29-ba15" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="0990-d02a-1046-8359" name="Fuel Rod Gun" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">14&quot;</characteristic>
-                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">6</characteristic>
-                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
-                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1, Small Blast, Brutal (2), Armourbane</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Fuel Rod Gun" id="0af9-d053-9e4d-8eae" hidden="false" type="profile" targetId="2965-165c-5cc4-4615"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Needle Rifle" hidden="false" id="1294-36ef-a93d-986f">
               <profiles>
@@ -892,19 +890,12 @@ A Grunt Squad may only split in this way if:
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Fuel Rod Gun" hidden="false" id="8df8-927e-9459-8178" collective="false">
-              <profiles>
-                <profile name="Fuel Rod Gun" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="8606-f40d-67a7-ef9b">
-                  <characteristics>
-                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">14&quot;</characteristic>
-                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">6</characteristic>
-                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">2</characteristic>
-                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Heavy 1, Small Blast, Brutal (2), Armourbane</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="15"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Fuel Rod Gun" id="ebc2-81f3-4a1a-8fbe" hidden="false" type="profile" targetId="2965-165c-5cc4-4615"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Plasma Rifle" hidden="false" id="8049-7454-85ec-b359" collective="false">
               <costs>
@@ -1626,6 +1617,11 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
                       <costs>
                         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
                       </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Needle Rifle" hidden="false" id="aa65-66d1-2a8a-caac">
+                      <infoLinks>
+                        <infoLink name="Needle Rifle" id="0e87-95de-fde4-dc3a" hidden="false" type="profile" targetId="243d-45c5-b0cb-77c5"/>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
