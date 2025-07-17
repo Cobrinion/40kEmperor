@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -51,6 +51,11 @@
         <categoryLink targetId="644a-f3d4-2643-0e0b" id="3a38-fb3f-e241-ca97" primary="true" name="Troops"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Hunter-Killer Team" hidden="false" id="0c9a-43c1-2c51-69d3" type="selectionEntry" targetId="0026-f9e6-942e-0678">
+      <categoryLinks>
+        <categoryLink targetId="3aa2-0f2d-c4eb-172c" id="1583-f74a-c10b-a19e" primary="true" name="Fast Attack"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f600-c88f-4166-4d69" name="Grunt Squad" hidden="false" collective="false" import="true" type="unit">
@@ -90,14 +95,14 @@
                 <profile name="Plasma Pistol" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="fe6f-9f75-c66c-70ab">
                   <characteristics>
                     <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
-                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">2</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
                     <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
                     <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, Covenant Plasma</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Plasma Pistol (Overcharged)" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="114b-070d-4683-110f">
                   <characteristics>
-                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
                     <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
                     <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
                     <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
@@ -145,7 +150,7 @@
           <selectionEntries>
             <selectionEntry id="8080-a340-a9a3-2930" name="Brute Minor" hidden="false" collective="false" import="true" type="model">
               <costs>
-                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="12"/>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
               </costs>
               <profiles>
                 <profile name="Brute Minor" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="7c7c-9665-d327-038c">
@@ -166,7 +171,7 @@
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon Selection: " id="6c9f-2310-ef26-a008" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f02-4f52-baf1-9680">
+                <selectionEntryGroup name="Ranged Weapons" id="6c9f-2310-ef26-a008" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f02-4f52-baf1-9680">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d8f-dedd-5ad6-e374" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb4a-5f64-6a33-9dd7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -245,6 +250,12 @@
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink import="true" name="Equipment" hidden="false" id="4ea6-248e-2583-7e12" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f"/>
+                <entryLink import="true" name="Melee Weapons" hidden="false" id="b481-0a53-d4e4-2761" type="selectionEntryGroup" targetId="5123-1217-0214-9a72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2ea3-416c-89fa-fb38"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ba1-d95b-6669-11d7"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="2cbd-26fa-35ed-f46a" name="Elite Minor" hidden="false" collective="false" import="true" type="model">
@@ -297,7 +308,7 @@
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="76b7-bd8c-c713-3cbb" name="Weapon Selection: " hidden="false" collective="false" import="true" defaultSelectionEntryId="aab2-eb32-e0bd-c5f5">
+                <selectionEntryGroup id="76b7-bd8c-c713-3cbb" name="Ranged Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="aab2-eb32-e0bd-c5f5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5524-d3b1-6b19-72e4" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fce-b9ad-8c43-49dc" type="min"/>
@@ -373,6 +384,12 @@
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Equipment" hidden="false" id="c5b2-c365-641b-16e7" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f"/>
+                <entryLink import="true" name="Melee Weapons" hidden="false" id="351b-e6a7-c007-10b9" type="selectionEntryGroup" targetId="5123-1217-0214-9a72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4960-ca68-7484-4f00"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2967-c616-e4ef-23d7"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="4a41-5b5f-a6e6-cf11" name="Grunt Ultra" hidden="false" collective="false" import="true" type="model">
@@ -492,7 +509,7 @@
                         </profile>
                         <profile name="Plasma Pistol (Overcharged)" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="9e5e-2461-a4c6-38df">
                           <characteristics>
-                            <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                            <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
                             <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
                             <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
                             <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
@@ -566,7 +583,7 @@ A Grunt Squad may only split in this way if:
             <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
             <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">10</characteristic>
             <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (3)</characteristic>
+            <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (3), Relentless</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -585,28 +602,34 @@ A Grunt Squad may only split in this way if:
             <profile id="f359-ea16-12b2-3130" name="Plasma Pistol" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
-                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">2</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
                 <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, Covenant Plasma</characteristic>
               </characteristics>
             </profile>
             <profile id="6ca2-17ca-c39c-984e" name="Plasma Pistol (Overcharged)" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
               <characteristics>
-                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
                 <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="d654-1269-d0c7-a77a" name="One Use Only/One Shot Only" hidden="false" targetId="3243-b9fe-722d-4805" type="rule"/>
-            <infoLink id="821a-7df4-9028-0410" name="Haywire" hidden="false" targetId="ba9c-e447-f4d9-38dd" type="rule"/>
-            <infoLink id="08e4-1e80-0aed-310d" name="Covenant Plasma" hidden="false" targetId="33ee-bac7-9e15-e729" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="May take Advanced Energy Shielding" hidden="false" id="c129-cd79-3188-f716">
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Advanced Energy Shielding" id="0973-9c1d-b071-ad4b" hidden="false" type="profile" targetId="641e-5c80-ab9c-df38"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e9d-8e3e-e355-ad74"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -649,6 +672,21 @@ A Grunt Squad may only split in this way if:
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Plasma Repeater" hidden="false" id="01b2-bb57-75cc-3f2c">
+              <profiles>
+                <profile name="Plasma Repeater" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="f442-9043-a048-18c9">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire, Covenant Plasma</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="8b95-d322-ceae-0bce" name="Plasma Rifle" hidden="false" collective="false" import="true" targetId="d9b6-9e97-cbd5-3865" type="selectionEntry"/>
@@ -659,7 +697,7 @@ A Grunt Squad may only split in this way if:
             </entryLink>
             <entryLink import="true" name="Carbine" hidden="false" id="d128-a865-db33-d71e" type="selectionEntry" targetId="cb0c-67d0-1f28-ea64">
               <costs>
-                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
+                <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -668,7 +706,11 @@ A Grunt Squad may only split in this way if:
       <entryLinks>
         <entryLink id="3758-903a-b0d8-a87a" name="Armour Abilities" hidden="false" collective="false" import="true" targetId="5774-1bee-79ed-ea2b" type="selectionEntryGroup"/>
         <entryLink id="a171-9ef7-259b-4b49" name="Plasma Grenade" hidden="false" collective="false" import="true" targetId="2b86-00e1-892e-3090" type="selectionEntry"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="b2d9-9b44-25f2-4144" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f"/>
+        <entryLink import="true" name="Equipment" hidden="false" id="b2d9-9b44-25f2-4144" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca57-7aaa-07b9-f094" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="110"/>
@@ -695,7 +737,7 @@ A Grunt Squad may only split in this way if:
                 <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
                 <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">9</characteristic>
                 <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">3+</characteristic>
-                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (2), </characteristic>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Energy Shielding (2), Relentless</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -709,14 +751,14 @@ A Grunt Squad may only split in this way if:
                 <profile id="c8df-45e2-1d7c-0c34" name="Plasma Pistol" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
                   <characteristics>
                     <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
-                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">2</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
                     <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
                     <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, Covenant Plasma</characteristic>
                   </characteristics>
                 </profile>
                 <profile id="5584-ff01-3fc7-3413" name="Plasma Pistol (Overcharged)" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
                   <characteristics>
-                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
                     <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
                     <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
                     <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
@@ -778,6 +820,21 @@ A Grunt Squad may only split in this way if:
               </repeats>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Entire Squad may take Advanced Energy Shielding" hidden="false" id="e95f-5ac9-3814-a998">
+          <infoLinks>
+            <infoLink name="Advanced Energy Shielding" id="128a-06c4-89e1-ac6f" hidden="false" type="profile" targetId="641e-5c80-ab9c-df38"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="10" field="e7de-8dcf-403a-b76a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="ed8b-9128-07ad-2085" childId="b901-bced-dd30-ef6a" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9ae-aa1e-9ded-ae41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -1027,8 +1084,8 @@ If a Ghost is destroyed it explodes. Nearby units suffer a Strength 4 AP- Hit fo
           <selectionEntries>
             <selectionEntry id="6cbd-f4b7-65e8-9e0a" name="Class 2 Energy-Gun" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43e0-35d7-9cb8-02e6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ded-9366-4ca1-4e8c" type="min"/>
+                <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43e0-35d7-9cb8-02e6" type="max"/>
+                <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ded-9366-4ca1-4e8c" type="min"/>
               </constraints>
               <profiles>
                 <profile id="7ade-8c21-4673-83c7" name="Class 2 Energy-Gun" hidden="false" typeId="66fe-f217-d00c-847a" typeName="Weapon">
@@ -1036,7 +1093,7 @@ If a Ghost is destroyed it explodes. Nearby units suffer a Strength 4 AP- Hit fo
                     <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">18&quot;</characteristic>
                     <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
                     <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
-                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire 2, Twin Linked, Covenant Plasma</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire 2, Twin-Linked, Covenant Plasma</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1151,6 +1208,10 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
               <costs>
                 <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="0"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="846f-4593-c1b0-3fcd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0bb-a893-f42c-353f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -1260,14 +1321,14 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
                     <profile name="Plasma Pistol" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="65ba-8cb3-01fe-f35c">
                       <characteristics>
                         <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">2</characteristic>
+                        <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
                         <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
                         <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, Covenant Plasma</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="Plasma Pistol (Overcharged)" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="11f5-a5bd-4a7b-0990">
                       <characteristics>
-                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                        <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
                         <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
                         <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
                         <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
@@ -1368,7 +1429,7 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon Selection: " id="cd53-fa69-316f-15e8" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f02-4f52-baf1-9680">
+                <selectionEntryGroup name="Ranged Weapon:" id="cd53-fa69-316f-15e8" hidden="false" collective="false" import="true" defaultSelectionEntryId="7f02-4f52-baf1-9680">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23b4-012f-5236-b46a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4201-d321-6688-8c96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1447,6 +1508,12 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink import="true" name="Equipment" hidden="false" id="b588-7edf-dbed-dce7" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f"/>
+                <entryLink import="true" name="Melee Weapons" hidden="false" id="18aa-d31a-04d3-f421" type="selectionEntryGroup" targetId="5123-1217-0214-9a72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c2b-c923-c434-eeba"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3770-78e1-4f76-f06f"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Elite Minor" hidden="false" id="b18c-3b49-f71d-f14c" collective="false">
@@ -1491,7 +1558,7 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
                     </rule>
                   </rules>
                   <costs>
-                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+                    <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
                   </costs>
                   <entryLinks>
                     <entryLink import="true" name="Armour Abilities" hidden="false" id="90ea-1ed3-4509-9d8b" collective="false" targetId="5774-1bee-79ed-ea2b" type="selectionEntryGroup"/>
@@ -1499,7 +1566,7 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon Selection: " id="7121-d5a3-a95a-899e" hidden="false" collective="false" import="true" defaultSelectionEntryId="aab2-eb32-e0bd-c5f5">
+                <selectionEntryGroup name="Ranged Weapon" id="7121-d5a3-a95a-899e" hidden="false" collective="false" import="true" defaultSelectionEntryId="aab2-eb32-e0bd-c5f5">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bed3-c043-33a8-87d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53a4-0bc8-4ee6-ac4d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1575,6 +1642,12 @@ Splatter: A Gravity boosting Wraith may choose to charge a model in the charge p
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Equipment" hidden="false" id="d627-e3d9-ca43-776a" type="selectionEntryGroup" targetId="5acf-42e1-8cbd-6b2f"/>
+                <entryLink import="true" name="Melee Weapons" hidden="false" id="cfda-7d43-9139-4b48" type="selectionEntryGroup" targetId="5123-1217-0214-9a72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e287-2f9f-bd1f-20b0"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="183f-ee91-fc30-4038"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1621,7 +1694,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
       </selectionEntries>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Elite Strike Team" hidden="false" id="f69e-69f8-33d8-31ae"/>
-    <selectionEntry type="upgrade" import="true" name="Brute Pack" hidden="false" id="eca3-744a-5429-94cb">
+    <selectionEntry type="upgrade" import="true" name="Brute Pack (WIP)" hidden="false" id="eca3-744a-5429-94cb">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Brute" hidden="false" id="e1d7-5f0c-692b-7f04">
           <profiles>
@@ -1647,7 +1720,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="2000-2476-0637-e16e"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="12"/>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Pack Leader" hidden="false" id="d6a0-36fe-d4ae-d067">
@@ -1678,6 +1751,183 @@ In addition, when resolving shooting attacks from the front arc, treat the model
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hunter-Killer Team" hidden="false" id="0026-f9e6-942e-0678">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Skirmisher" hidden="false" id="a56c-5218-6759-c7d1">
+          <profiles>
+            <profile name="Skirmisher" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="bbda-b4f2-009d-a53f">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmisher)</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">8&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">2</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">2</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">5</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">2</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">6</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">6+</characteristic>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Fleet (2), Infiltrate, Outflank, Scout, Hit and Run</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="71f3-813a-0ab4-ab44"/>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="6175-c8c2-1aba-c1ea"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Skirmisher Major" hidden="false" id="58af-7b56-5ad3-edb7">
+          <profiles>
+            <profile name="Skirmisher Major" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="5777-e7f5-8ad1-c97f">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmisher)</characteristic>
+                <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">8&quot;</characteristic>
+                <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
+                <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
+                <characteristic name="S" typeId="23ae-6026-aebd-abc3">2</characteristic>
+                <characteristic name="T" typeId="f6db-a6a5-71d2-71c5">2</characteristic>
+                <characteristic name="W" typeId="a763-cbc8-2080-a4fb">1</characteristic>
+                <characteristic name="I" typeId="ea41-893b-3f82-5482">5</characteristic>
+                <characteristic name="A" typeId="d535-b745-b613-a7ab">3</characteristic>
+                <characteristic name="Ld" typeId="3b5e-ab67-ed36-a88f">7</characteristic>
+                <characteristic name="Save" typeId="d33e-1fdc-0c00-8cb8">6+</characteristic>
+                <characteristic name="Special Rules" typeId="3df9-f556-8725-fe75">Fleet (2), Infiltrate, Outflank, Scout, Hit and Run</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77f3-dfd5-3e13-fee8"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e885-6fca-270c-aeee"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="The Hunter-Killer Pack may choose from:" id="e55c-776a-3799-1abb" hidden="false" defaultSelectionEntryId="af09-2bd2-1cba-1704">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Carbines" hidden="false" id="8fde-8c29-8308-c908">
+              <infoLinks>
+                <infoLink name="Carbine" id="d594-8270-acd6-acda" hidden="false" type="profile" targetId="7099-c51c-69e6-092c"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" value="7" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Plasma Pistols" hidden="false" id="af09-2bd2-1cba-1704">
+              <profiles>
+                <profile name="Plasma Pistol" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="9a18-5f22-fd1d-bea7">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">12&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">3</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, Covenant Plasma</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Plasma Pistol (Overcharged)" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="59cc-bbbd-ff5b-f587">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">6&quot;</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">5</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Pistol, One Shot Only, Haywire, Covenant Plasma</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Needlers" hidden="false" id="0c5c-583f-793c-fdeb">
+              <infoLinks>
+                <infoLink name="Needler" id="3ec6-50d7-eb81-1827" hidden="false" type="profile" targetId="66c6-40fe-bb69-a737"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" value="5" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Plasma Rifles" hidden="false" id="6e47-4f30-4410-f7f3">
+              <infoLinks>
+                <infoLink name="Plasma Rifle" id="771d-b4c0-50b2-7cd5" hidden="false" type="profile" targetId="84c1-1ea0-c135-72d3"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" value="5" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Needle Rifles" hidden="false" id="0875-7aab-5aad-9219">
+              <infoLinks>
+                <infoLink name="Needle Rifle" id="88cf-efe2-137f-b2f7" hidden="false" type="profile" targetId="243d-45c5-b0cb-77c5"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" value="7" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b033-93c9-c967-5e43"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bda-a1c5-c014-cf33"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="The Hunter-Killer Squad may take any of the following:" id="430f-960c-0762-f047" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Energy Cutlesses" hidden="false" id="61af-5c99-bc9a-1ba8">
+              <profiles>
+                <profile name="Energy Dagger" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="f408-e0b7-0039-ac1e">
+                  <characteristics>
+                    <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                    <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                    <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                    <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Rending (6+)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="increment" value="7" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Small Point Defence Gauntlet" hidden="false" id="8f13-52a1-eec1-c109">
+              <profiles>
+                <profile name="Small Point-Defence Gauntlet" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="d6cc-0e93-ecb2-be62">
+                  <characteristics>
+                    <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">A model equipped with a Small Point-Defence Gauntlet increases its Armor Save by +1 (to a maximum of 2+) against melee attacks made against it.
+
+In addition, when resolving melee attacks, treat the model’s Toughness as 1 higher than normal for the purposes of determining whether it suffers Instant Death.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="increment" value="5" field="e7de-8dcf-403a-b76a">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -1767,7 +2017,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fuel Rod Gun" hidden="false" id="ae23-4cf7-ed45-f7f5" collective="false">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e808-2631-cc6a-8b42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e808-2631-cc6a-8b42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile name="Fuel Rod Gun" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="2965-165c-5cc4-4615">
@@ -1785,7 +2035,7 @@ In addition, when resolving shooting attacks from the front arc, treat the model
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Pek-Pattern Plasma Cannon" hidden="false" id="8774-5e1b-c5ab-de52" collective="false">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ab4e-3a29-1fff-956d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="ab4e-3a29-1fff-956d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile name="Pek-Pattern Plasma Cannon" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="1b92-d923-977b-9c42">
@@ -1842,7 +2092,18 @@ In addition, when resolving shooting attacks from the front arc, treat the model
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Plasma Repeater" hidden="false" id="5b3d-15d8-e5ee-5684"/>
+        <selectionEntry type="upgrade" import="true" name="Plasma Repeater" hidden="false" id="5b3d-15d8-e5ee-5684">
+          <profiles>
+            <profile name="Plasma Repeater" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="8d8d-0734-5439-2976">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">24&quot;</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">4</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">5</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Rapid Fire, Covenant Plasma</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Brute Shot" hidden="false" id="dc2e-50be-6a29-644f">
           <profiles>
             <profile name="Brute Shot" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="74d8-b3b6-410b-f005">
@@ -1983,7 +2244,7 @@ The barrier remains in play until the end of the game or until it is targeted an
                 <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">8&quot;</characteristic>
                 <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">-</characteristic>
                 <characteristic name="AP" typeId="1544-3a5e-d421-edf9">-</characteristic>
-                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Large Blast, Haywire, Shield Disruption</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Assault 1, Large Blast, Shield Disruption</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2011,6 +2272,82 @@ The barrier remains in play until the end of the game or until it is targeted an
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7bc-84e6-9a08-ff8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Melee Weapons" id="5123-1217-0214-9a72" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Energy Dagger" hidden="false" id="74d2-6f79-cf81-76ef">
+          <profiles>
+            <profile name="Energy Dagger" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="f1e4-330a-384f-a61d">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Rending (6+)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f14f-a228-eae9-49c3"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Energy Lance" hidden="false" id="fe74-1c46-1a51-eba1">
+          <profiles>
+            <profile name="Energy Lance" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="8e21-f68f-30d7-2f50">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">User</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Reach (1), Two-Handed</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1e8-28b5-aa53-4e9e"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Energy Stave" hidden="false" id="e88d-5207-c2d2-11ad">
+          <profiles>
+            <profile name="Energy Stave" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="a37d-e95b-7b19-f4a3">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+1</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Two-Handed</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="5"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a079-bcb5-422e-b113"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Gravity Mace" hidden="false" id="1966-7ba2-0333-bfcd">
+          <profiles>
+            <profile name="Gravity Mace" typeId="66fe-f217-d00c-847a" typeName="Weapon" hidden="false" id="1a39-4077-7e50-d58c">
+              <characteristics>
+                <characteristic name="Range" typeId="1fc0-83ca-e978-5a16">-</characteristic>
+                <characteristic name="Strength" typeId="cb5e-ad7f-f63b-41cd">+1</characteristic>
+                <characteristic name="AP" typeId="1544-3a5e-d421-edf9">4</characteristic>
+                <characteristic name="Type" typeId="79ff-eaa1-5809-53f3">Melee, Concussive</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="e7de-8dcf-403a-b76a" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2681-21da-9d10-fbfa"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2049,10 +2386,10 @@ Energy Shielding regenerates by 1 at the start of each battleround to it&apos;s 
 If the test is passed, resolve the Charge as normal.
 
 
-If the test is failed, the model drops all carried Ranged weapons (it may not use any Ranged weapons for the rest of the battle). However, it gains the Rage (X) and Furious Charge (X) special rules for the remainder of the battl where X is the number listed in the Battlelust rule.
+If the test is failed, the model drops all carried Ranged weapons (it may not use any Ranged weapons for the rest of the battle). However, it gains the Rage (X) and Furious Charge (X) special rules for the remainder of the battle where X is the number listed in the Battlelust rule.
 
 
-In addition, a model under the effects of Battlelust must always Consolidate toward the nearest visible enemy, and must declare a Charge if one is possible in each following Assault Phase.</description>
+In addition, a model, and any unit they are apart of, under the effects of Battlelust must always Consolidate toward the nearest visible enemy, and must declare a Charge if one is possible in each following Assault Phase.</description>
     </rule>
     <rule name="Volatile Overcharge" id="4c6b-91d1-0ce3-2c33" hidden="false">
       <description>Brute Plasma Rifles are notoriously unstable. Their overcharged capacitors give them incredible firepower, but risk burning out entirely.
@@ -2084,7 +2421,20 @@ This bonus does not stack with itself — a unit may only benefit from one insta
       <description>After placing the Blast Marker from the Regenerator, leave it in place until the end of the next turn. Any non-vehicle models within the blast marker gain the Feel No Pain (5+) special rule. If a model already has a Feel No Pain roll, use the better of the two values.</description>
     </rule>
     <rule name="Shield Disruption" id="6dca-5600-6298-03c1" hidden="false">
-      <description>After placing the Blast Marker from the Power Drain, leave it in place until the end of the next turn. Any models within the blast marker suffer a -1 penalty to all Invulnurable Saves (To a minimum of 6+) until the end of their next turn. In addition, if a model has the Energy Shielding special rule, it may not regenerate Energy Shielding so long as it remains inside the blast marker.</description>
+      <description>After placing the Blast Marker from the Power Drain, leave it in place until the end of the next turn. Any models within the blast marker suffer a -1 penalty to all Invulnurable Saves (To a minimum of 6+) until the end of their next turn. Any vehicles within the blast marker are unable to move. In addition, if a model has the Energy Shielding special rule, it may not regenerate Energy Shielding so long as it remains inside the blast marker.</description>
     </rule>
   </sharedRules>
+  <sharedProfiles>
+    <profile name="Advanced Energy Shielding" typeId="d4b8-6c36-8bad-c884" typeName="Wargear Item" hidden="false" id="641e-5c80-ab9c-df38">
+      <characteristics>
+        <characteristic name="Description" typeId="a1cc-ea5e-6a1d-d78e">A model with this upgrade benefits from enhanced shielding and reinforced armor systems. There combat harness may be more advanced or of superior make to those around them. 
+
+
+While the model has any remaining wounds allocated to its Energy Shielding, it gains +1 to its Toughness for the purposes of resolving To Wound rolls and other effects that use the model&apos;s Toughness characteristic.
+
+
+This bonus is lost immediately once the model has no remaining Energy Shielding wounds</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
 </catalogue>

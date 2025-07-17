@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="31" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="d74c-5ac5-fbf4-56c3" name="Warhammer 40k: Emperor Edition" revision="32" battleScribeVersion="2.03" authorName="Cobrinion" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <publications>
     <publication id="3ff9-2058-b559-545b" name="Github" publisherUrl="Cobrinion/40kEmperor"/>
   </publications>
@@ -1023,7 +1023,6 @@ Roll for the arrival of all Deep Striking units as specified in the rules for Re
 First, place one model from the unit anywhere on the table,in the position where you would like it to arrive, and roll for scatter to determine the model’s final position. If a vehicle scatters when arriving via Deep Strike, do not change its facing – it must continue to face the same direction as it did before you rolled for scatter. Next, the unit’s remaining models are arranged around the first one. Models must be placed in base contact with the first model and begin to form a circle around it. When the first circle is complete, a further concentric circle must be placed with each model touching the circle inside it. Each circle must include as many models as will fit. Models deploying via Deep Strike treat all difficult terrain as dangerous terrain.
 In the Movement phase during which they arrive, Deep Striking units may not move any further, other than to disembark from a Deep Striking Transport vehicle if they are in one. Units Deep Striking into ruins are placed on the ground floor. Deep Striking units count non-ruined buildings (except for their battlements) as impassable terrain.
 In that turn’s Shooting phase, these units can fire (or Run, Turbo-boost or move Flat Out) as normal, and count as having moved in the previous Movement phase. Vehicles, except for Walkers, count as having moved at Combat Speed (even Immobilised vehicles). This can affect the number of weapons they can fire with their full Ballistic Skill (see page 71).
-In that turn’s Assault phase, however, these units cannot charge. This also applies to units that have disembarked from Transports that arrived by Deep Strike that turn.
 
 
 Deep Strike and Transports
@@ -2087,35 +2086,48 @@ SPECIAL RULES
 Gargantuan Creatures and Flying Gargantuan Creatures have the following special rules: Fear, Fearless, Feel No Pain, Hammer of Wrath, Move Through Cover, Relentless, Smash, Strikedown, Vector Strike (Flying Gargantuan Creatures only).</description>
     </rule>
     <rule name="Vehicle" id="a32a-5850-0dba-eac8" hidden="false">
-      <description>As vehicle models do not usually have bases, the normal rule of measuring distances to or from a base cannot be used. Instead, measure to and from their hull, ignoring gun barrels, dozer blades, banners and other decorative elements.
-There is, however, the notable exception of a vehicle’s weaponry. When firing a vehicle’s weapons, ranges are measured from the muzzle of the firing weapon, whilst line of sight is determined from the weapon’s mounting point and along its barrel, as will be explained later in this section.
-VEHICLES IN THE MOVEMENT PHASE
-The distance a vehicle moves dictates how accurately it can fire its weapons, as described later.
-Stationary. A vehicle that remains stationary will be able to bring its full firepower to bear on the enemy.
+      <description>VEHICLES IN THE MOVEMENT PHASE
+As with all other models in Warhammer: The Boys Edition rules, Vehicles have a Movement Characteristic which defines the maximum number of inches they may move on the battlefield. This Movement Characteristic is often much greater than any Infantry model, but the distance a Vehicle moves dictates how accurate its weapons fire will be, and so Vehicles that take full advantage of their powerful engines will be less capable of laying down support fire later in the turn. 
+
+Stationary –
+A Vehicle that remains Stationary will be able to attack with all of its weapons, regardless of type, with no modification to their accuracy. 
+
+Combat Speed –
+A Vehicle that travels equal to or less, than half of its Movement Characteristic is said to be 
+moving at Combat Speed. This represents the Vehicle advancing slowly to keep firing. A Vehicle moving at Combat Speed may attack with all non-Ordnance or non-Destroyer weapons with no modification to their accuracy. A Vehicle moving at Combat Speed may only fire a single Ordnance or Destroyer weapon, and if it does so then all other weapons must be fired as Snap Shots.
 
 
-Combat Speed. A vehicle that travels up to 6&quot; is said to be moving at Combat Speed. This represents the vehicle advancing slowly to keep firing, albeit with reduced firepower.
+Cruising Speed –
+A Vehicle that travels more than half of its Movement Characteristic is said to be moving at Cruising Speed. This represents the Vehicle diverting power to keep it moving as fast as possible, making all of its firepower wildly inaccurate. A Vehicle moving at Cruising Speed may fire a single weapon without 
+modification to its BS and any other weapons as Snap Shots. However, a Vehicle moving at Cruising Speed may not fire Ordnance or Destroyer weapons.
+Vehicles can turn any number of times as they move, just like any other model. Vehicles turn by pivoting on the spot about their centre point, rather than wheeling round. Pivoting on the spot alone does not count as moving, so a Vehicle that only pivots in the Movement phase counts as Stationary (however, Immobilised Vehicles cannot even pivot on the spot). Pivoting is always done from the centre of a Vehicle to prevent it from accidentally moving further than intended or allowed. Just like other units, Vehicles cannot move over friendly models. A Vehicle may only pivot during the Movement phase, unless another rule specifically allows it to do so at another point. Unlike other models, Vehicles may not move vertically in terrain or on Terrain Pieces in order to ascend levels. Some Vehicle types, from combat aircraft to lumbering 
+artillery vehicles, as detailed later in this section, can affect both the manner in which a Vehicle moves and the distances it may move.
 
 
-Cruising Speed. A vehicle that travels more than 6&quot; and up to 12&quot; is said to be moving at Cruising Speed. This represents the vehicle diverting power to keep it moving as fast as possible, making all of its firepower wildly inaccurate. Vehicles can turn any number of times as they move, just like any other model.
+Difficult Terrain and Dangerous Terrain
+Vehicles moving through areas of terrain are not slowed like other units, but still risk becoming stuck or damaged. Vehicles treat all Difficult Terrain as Dangerous Terrain 
+instead. A Vehicle that fails a Dangerous Terrain test immediately loses 1 Hull Point and suffers an Immobilised result on the Vehicle Damage table.
 
-Moving Flat Out
-A vehicle can elect to move Flat Out instead of firing in the Shooting phase, immediately moving up to 6&quot;; this move triggers Dangerous Terrain tests as normal. A Tank cannot move Flat Out in the same turn that it performs a Tank Shock.
+Ramming
+When moving a Vehicle, the controlling player may declare that the Vehicle will attempt to Ram instead of moving normally. A Ram Attack allows a Vehicle to use its sheer bulk as a weapon, crushing infantry and battering even the most heavily-armoured war machines. The Vehicle attempting a Ram Attack, and any Em-
+barked troops, may only fire Snap Shots in that turn’s Shooting phase.
+To perform a Ram Attack, first turn the Vehicle on the spot to face the direction you intend to move it in, and, after measuring, declare how many inches the Vehicle is going to move, up to a maximum of its Movement Characteristic. If, due to the size of the Vehicle modelmaking the Ram, pivoting the model brings it into contact 
+with an enemy unit then move the Ramming Vehicle the minimum distance required to keep it 1&quot; away from any other model before beginning the Ram. Once the Vehicle has been ‘aimed’ and the intended distance declared, move the Vehicle 
+straight forwards until it comes into contact with a unit, enemy or friendly, or it reaches the distance declared – no other changes of direction are allowed during a Ram.
+Note that a Vehicle conducting a Ram may not contact a unit that is locked in combat. If its movement would bring it into contact with a unit that is locked in combat then
+it must halt its movement 1&quot; away from that unit, ending the Ram.
+If a non-Vehicle unit is reached then that unit suffers D6 automatic Hits. These hits are resolved at a Strength equal to half the Front Armour Value of the Ramming Vehicle, rounding up, and with an AP of -. If the Ramming Vehicle is a Super-
+heavy Vehicle then the Strength of the attack is always 10, and the number of Hits is increased to 2D6.Once all Hits sustained from the Ram have been resolved, the 
+unit that has been rammed must take a Morale check and immediately Fall Back if it fails. Regardless of the result of the check, the Vehicle stops moving 1&quot; away from any other models and does not move any further this turn. If the Ramming Vehicle comes into contact with an enemy Vehicle or Building, then all Vehicles or Buildings immediately inflict a Hit against any Armour Facing that is in contact with another Vehicle. The Strength of Hits inflicted on all Vehicles will be equal to the Armour Value, rounding up, on the facing that is in contact with an enemy Vehicle or Building.
+If the Ramming Vehicle has more starting Hull Points than any Vehicle or Building it is in contact with, add +1 to the Strength of the Hit, and if the Ramming Vehicle
+has the Slow or Super-heavy type, or is a Building, add +4 Strength, to a maximum value of 10. Both players roll for armour penetration against any of their opponent’s Vehicles or Building involved in the Ramming Attack, and any results are immediately applied. Regardless of the damage dealt to any Vehicles or Buildings involved
+in the Ram Attack, once the Ram Attack is resolved the Ramming Vehicle halts 1&quot; away from any other models and does not move further this turn.
+If, at any point in its move, the Vehicle would enter into con-
+tact with Impassable Terrain or a battlefield edge, or if it 
+passes within 1&quot; of units in combat or friendly units, it immediately stops moving 1&quot; away from any other model. Units already Falling Back. If a unit that is Falling Back is Rammed, the unit that is Falling Back automatically fails its Morale check. This also applies if a unit Falls Back from a Ramming Attack and the Vehicle’s remaining move brings it into contact with them a second time. Ramming from Reserve A Vehicle that moves onto the battlefield from Reserve may attempt a Ram. This must be declared before the Vehicle moves onto the battlefield.
 
-Vehicles turn by pivoting on the spot about their centre-point, rather than wheeling round. Pivoting on the spot alone does not count as moving, so a vehicle that only pivots in
-the Movement phase counts as Stationary (however, Immobilised vehicles cannot even pivot on the spot). Pivoting is always done from the centre of a vehicle to prevent it from accidentally moving further than intended or allowed. Just like other units, vehicles cannot move over friendly models. Difficult and Dangerous Terrain Vehicles moving through broken terrain are not slowed like other units, but still risk becoming stuck or damaged. Vehicles are not slowed down by difficult terrain. However, they treat all difficult terrain as dangerous terrain instead. A vehicle that fails a Dangerous Terrain test immediately loses one Hull point and suffers an Immobilised result from the Vehicle Damage table (see page 74).
-VEHICLES IN THE PSYCHIC PHASE
-Vehicles with the Psychic Pilot special rule (see page 170) manifest their psychic powers during the Psychic phase, as normal.
-VEHICLES IN THE SHOOTING PHASE
-When a vehicle fires, it uses its own Ballistic Skill characteristic and shoots like any other unit. All its weapons must fire at a  single target unit. 
-Moving and Shooting with Vehicles
-All vehicles have the Relentless special rule, but the number and accuracy of the weapons a vehicle can fire in the Shooting phase depends on how fast it moved in that turn’s Movement phase:
-A vehicle that remained Stationary can fire all of its weapons. Note that pivoting on the spot does not count as moving.
-A vehicle that moved at Combat Speed may fire a single weapon using its Ballistic Skill. Thevehicle can also fire Snap Shots
-with any other weapons.
-A vehicle that moved at Cruising Speed can only make Snap Shots, as above.
-Vehicles and Ordnance Weapons
-Unlike other units, vehicles can move and fire with Ordnance weapons. However, a vehicle that fires an Ordnance weapon can only make Snap Shots with its other weapons that turn.</description>
+Ramming Restrictions
+Units cannot Embark onto or Disembark from a Transport Vehicle in the same Movement phase in which it has already performed a Ram. Likewise, a Transport Vehicle from which a unit has Embarked or Disembarked that Phase cannot perform a Ram in that Movement phase. A Vehicle that has performed a Ram during the Movement  phase may still make Shooting Attacks in the following Shooting phase, but may only make Snap Shots.</description>
     </rule>
     <rule name="Transport" id="ebe2-6e53-8dee-4fdc" hidden="false">
       <description>Transports have several additional characteristics: Transport Capacity, Fire Points and Access Points.
