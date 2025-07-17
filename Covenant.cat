@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="29d5-6a3e-8643-719d" name="Covenant" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="d74c-5ac5-fbf4-56c3" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <entryLinks>
     <entryLink id="a773-03a1-5b4e-2bc0" name="Grunt Squad" hidden="false" collective="false" import="true" targetId="f600-c88f-4166-4d69" type="selectionEntry">
       <categoryLinks>
@@ -1754,11 +1754,11 @@ In addition, when resolving shooting attacks from the front arc, treat the model
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hunter-Killer Team" hidden="false" id="0026-f9e6-942e-0678">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Skirmisher" hidden="false" id="a56c-5218-6759-c7d1">
+        <selectionEntry type="model" import="true" name="Skirmisher" hidden="false" id="a56c-5218-6759-c7d1">
           <profiles>
             <profile name="Skirmisher" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="bbda-b4f2-009d-a53f">
               <characteristics>
-                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmisher)</characteristic>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmish)</characteristic>
                 <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">8&quot;</characteristic>
                 <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
                 <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
@@ -1781,11 +1781,11 @@ In addition, when resolving shooting attacks from the front arc, treat the model
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="6175-c8c2-1aba-c1ea"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Skirmisher Major" hidden="false" id="58af-7b56-5ad3-edb7">
+        <selectionEntry type="model" import="true" name="Skirmisher Major" hidden="false" id="58af-7b56-5ad3-edb7">
           <profiles>
             <profile name="Skirmisher Major" typeId="35bb-3fdd-dd9d-1fc8" typeName="Unit" hidden="false" id="5777-e7f5-8ad1-c97f">
               <characteristics>
-                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmisher)</characteristic>
+                <characteristic name="Unit Type" typeId="2ba2-3a82-dfb7-7849">Infantry (Light, Skirmish)</characteristic>
                 <characteristic name="M" typeId="e8fa-a6b3-0e8c-18aa">8&quot;</characteristic>
                 <characteristic name="WS" typeId="9660-0df5-9c5d-3604">4</characteristic>
                 <characteristic name="BS" typeId="565d-bf36-9e7e-29b5">4</characteristic>
@@ -1900,12 +1900,15 @@ In addition, when resolving shooting attacks from the front arc, treat the model
                 </profile>
               </profiles>
               <modifiers>
-                <modifier type="increment" value="7" field="e7de-8dcf-403a-b76a">
+                <modifier type="increment" value="5" field="e7de-8dcf-403a-b76a">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a63b-66fe-c0c4-12c8"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Small Point Defence Gauntlet" hidden="false" id="8f13-52a1-eec1-c109">
               <profiles>
@@ -1918,12 +1921,15 @@ In addition, when resolving melee attacks, treat the model’s Toughness as 1 hi
                 </profile>
               </profiles>
               <modifiers>
-                <modifier type="increment" value="5" field="e7de-8dcf-403a-b76a">
+                <modifier type="increment" value="3" field="e7de-8dcf-403a-b76a">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="0026-f9e6-942e-0678" childId="model" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82c5-37d9-7599-49d7"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
